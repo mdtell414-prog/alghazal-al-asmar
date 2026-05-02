@@ -1,0 +1,48 @@
+const express = require("express");
+const mongoose = require("mongoose");
+
+const app = express();
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(__dirname));
+
+// MongoDB connection
+mongoose.connect("mongodb+srv://mdtell414_wdalkar09_user:MdWDALKar414A7TeLlSDERi@cluster0.p25yy5n.mongodb.net/test?appName=Cluster0")
+.then(() => console.log("MongoDB connected"))
+.catch(err => console.log(err));
+
+// Schema
+const bookingSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  date: String
+});
+
+const Booking = mongoose.model("Booking", bookingSchema);
+
+// POST
+app.post("/boka", async (req, res) => {
+  const { name, email, date } = req.body;
+
+  const booking = new Booking({ name, email, date });
+  await booking.save();
+
+  res.redirect("/success.html");
+});
+
+
+// GET
+app.get("/bookings", async (req, res) => {
+  const bookings = await Booking.find();
+  res.json(bookings);
+});
+
+app.delete("/delete/:id", async (req, res) => {
+  await Booking.findByIdAndDelete(req.params.id);
+  res.send("Deleted");
+});
+
+app.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
+})

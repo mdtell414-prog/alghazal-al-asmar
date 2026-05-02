@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Bookings</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Date</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+fetch("/bookings")
+  .then(res => res.json())
+  .then(data => {
+    const table = document.getElementById("tableBody");
+
+    data.forEach(b => {
+      const row = `
+        <tr>
+          <td>${b.name}</td>
+          <td>${b.email}</td>
+          <td>${b.date}</td>
+          <td><button onclick="deleteBooking('${b._id}')">Delete</button></td>
+        </tr>
+      `;
+      table.innerHTML += row;
+    });
+  });
+
+function deleteBooking(id) {
+  fetch("/delete/" + id, { method: "DELETE" })
+    .then(() => location.reload());
+}
+</script>
+
+</body>
+</html>
