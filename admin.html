@@ -1,49 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
+
 <head>
-  <title>Admin</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminpanel</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Professionell städservice i Falkenberg. Fönsterputsning, köksrengöring och hemstädning med hög kvalitet.">
+
+<meta name="keywords" content="Städservice Falkenberg, Fönsterputsning, Hemstädning, Köksrengöring">
+
+<meta name="author" content="Al Ghazal Al Asmar">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<h2>Bookings</h2>
+    <!-- NAVBAR -->
+    <div class="navbar">
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Date</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody id="tableBody"></tbody>
-</table>
+        <img src="img/logo.png" class="logo">
 
-<script>
-fetch("/bookings")
-  .then(res => res.json())
-  .then(data => {
-    const table = document.getElementById("tableBody");
+        <div>
+            <a href="index.html">Hem</a>
+            <a href="services.html">Tjänster</a>
+            <a href="about.html">Om oss</a>
+            <a href="admin.html">Admin</a>
+        </div>
 
-    data.forEach(b => {
-      const row = `
-        <tr>
-          <td>${b.name}</td>
-          <td>${b.email}</td>
-          <td>${b.date}</td>
-          <td><button onclick="deleteBooking('${b._id}')">Delete</button></td>
-        </tr>
-      `;
-      table.innerHTML += row;
-    });
-  });
+    </div>
 
-function deleteBooking(id) {
-  fetch("/delete/" + id, { method: "DELETE" })
-    .then(() => location.reload());
-}
-</script>
+    <!-- TITLE -->
+    <h2>Bokningar</h2>
+
+    <!-- TABLE -->
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Namn</th>
+                <th>E-post</th>
+                <th>Datum</th>
+                <th>Ta bort</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+
+    </table>
+
+    <!-- SCRIPT -->
+    <script>
+
+        fetch("/bookings")
+
+            .then(res => res.json())
+
+            .then(data => {
+
+                const table = document.getElementById("tableBody");
+
+                data.forEach(b => {
+
+                    const row = `
+                        <tr>
+                            <td>${b.name}</td>
+                            <td>${b.email}</td>
+                            <td>${b.date}</td>
+
+                            <td>
+                                <button onclick="deleteBooking('${b._id}')">
+                                    Radera
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+
+                    table.innerHTML += row;
+
+                });
+
+            });
+
+        function deleteBooking(id) {
+
+            fetch("/delete/" + id, {
+                method: "DELETE"
+            })
+
+            .then(() => location.reload());
+
+        }
+
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>© 2025 Al Ghazal Al Asmar Städservice</p>
+
+        <p>Alla rättigheter förbehållna</p>
+
+    </footer>
 
 </body>
+
 </html>

@@ -1,48 +1,241 @@
+/* ===== GENERAL ===== */
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #0b0b0b;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+
+h1 {
+    color: gold;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
 h2 {
-  margin-top: 40px;
+    color: gold;
+    font-size: 32px;
+    margin-top: 20px;
 }
 
+p {
+    color: white;
+    font-size: 20px;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    background: #333;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+/* ===== HERO IMAGE ===== */
+
+.hero {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== INTRO SECTION ===== */
+
+.intro {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* ===== CONTACT BUTTONS ===== */
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.contact-buttons a {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.call {
+    background-color: #333;
+}
+
+.whatsapp:hover,
+.call:hover {
+    opacity: 0.8;
+}
+
+/* ===== FORM ===== */
+
 form {
-  background: white;
-  padding: 20px;
-  margin: 20px auto;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
 }
 
 input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
 }
 
 button {
-  padding: 10px 20px;
-  background: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
+    background: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 button:hover {
-  background: #218838;
+    background: orange;
 }
+
+/* ===== TABLE ===== */
 
 table {
-  margin: 20px auto;
-  border-collapse: collapse;
-  width: 80%;
-  background: white;
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+    color: black;
 }
 
-th, td {
-  padding: 10px;
-  border: 1px solid #ddd;
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ===== SERVICES GALLERY ===== */
+
+.cleaning-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.clean-card {
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.clean-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.clean-card h3 {
+    padding: 15px;
+    font-size: 20px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        max-height: 250px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .cleaning-gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.footer {
+    background: #111;
+    color: gold;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 2px solid gold;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+
+
+.clean-card {
+    transition: transform 0.3s ease;
+}
+
+.clean-card:hover {
+    transform: translateY(-10px);
+}
+
+.clean-card img {
+    transition: 0.3s;
+}
+
+.clean-card img:hover {
+    opacity: 0.8;
+}
+
+.social-icons {
+    margin: 30px 0;
+}
+
+.social-icons a {
+    color: gold;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.social-icons a:hover {
+    color: white;
 }

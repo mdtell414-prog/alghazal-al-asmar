@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 // MongoDB connection
-mongoose.connect("mongodb+srv://mdtell414_wdalkar09_user:MdWDALKar414A7TeLlSDERi@cluster0.p25yy5n.mongodb.net/test?appName=Cluster0")
+mongoose.connect("mongodb+srv://mdtell414_wdalkar09_user:TElLKaSsAlaWdAlKarSD414XsEriMD@cluster0.p25yy5n.mongodb.net/test?appName=Cluster0")
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.log(err));
 
@@ -49,3 +49,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
+
+const helmet = require("helmet");
+app.use(helmet());
