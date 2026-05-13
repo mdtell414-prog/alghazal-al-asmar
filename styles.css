@@ -205,9 +205,6 @@ td {
     font-size: 16px;
 }
 
-
-
-
 .clean-card {
     transition: transform 0.3s ease;
 }
@@ -267,4 +264,47 @@ td {
     margin: 20px auto;
     max-width: 700px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+form {
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    margin: 40px auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid gold;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    transform: scale(1.03);
+    background: orange;
 }
