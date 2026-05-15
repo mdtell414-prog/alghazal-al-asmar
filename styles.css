@@ -1,3 +1,129 @@
+/* ===== GENERAL ===== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b0b0b;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+
+h1 {
+    color: gold;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: gold;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    background: #333;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+/* ===== HERO IMAGE ===== */
+
+.hero {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== INTRO SECTION ===== */
+
+.intro {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* ===== CONTACT BUTTONS ===== */
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.contact-buttons a {
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.call {
+    background-color: #333;
+}
+
+.whatsapp:hover,
+.call:hover {
+    opacity: 0.8;
+}
+
+/* ===== FORM ===== */
+
+form {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: orange;
+}
+
 /* ===== TABLE ===== */
 
 table {
@@ -30,22 +156,12 @@ td {
     text-align: center;
     color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.clean-card:hover {
-    transform: translateY(-10px);
 }
 
 .clean-card img {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    transition: 0.3s;
-}
-
-.clean-card img:hover {
-    opacity: 0.8;
 }
 
 .clean-card h3 {
@@ -53,7 +169,27 @@ td {
     font-size: 20px;
 }
 
-/* ===== FOOTER ===== */
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        max-height: 350px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .cleaning-gallery {
+        grid-template-columns: 1fr;
+    }
+
+}
 
 .footer {
     background: #111;
@@ -69,7 +205,21 @@ td {
     font-size: 16px;
 }
 
-/* ===== SOCIAL ICONS ===== */
+.clean-card {
+    transition: transform 0.3s ease;
+}
+
+.clean-card:hover {
+    transform: translateY(-10px);
+}
+
+.clean-card img {
+    transition: 0.3s;
+}
+
+.clean-card img:hover {
+    opacity: 0.8;
+}
 
 .social-icons {
     margin: 30px 0;
@@ -78,16 +228,14 @@ td {
 .social-icons a {
     color: gold;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 20px;
     margin: 0 15px;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 .social-icons a:hover {
     color: white;
 }
-
-/* ===== ABOUT ===== */
 
 .about-company {
     padding: 40px 20px;
@@ -105,8 +253,6 @@ td {
     font-size: 18px;
 }
 
-/* ===== REVIEWS ===== */
-
 .reviews {
     padding: 40px 20px;
 }
@@ -120,7 +266,125 @@ td {
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* ===== MOBILE MENU ===== */
+form {
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    margin: 40px auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #222;
+    color: white;
+    font-size: 16px;
+}
+
+form input:focus {
+    outline: none;
+    border: 1px solid gold;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    transform: scale(1.03);
+    background: orange;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar div {
+        margin-top: 10px;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-buttons a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .cleaning-gallery {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .reviews {
+        padding: 20px;
+    }
+
+    .review-card {
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+
+    .footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+}
 
 .menu-toggle {
     display: none;
@@ -128,8 +392,6 @@ td {
     color: white;
     cursor: pointer;
 }
-
-/* ===== MOBILE RESPONSIVE ===== */
 
 @media (max-width: 768px) {
 
