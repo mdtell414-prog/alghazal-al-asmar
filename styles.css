@@ -53,8 +53,6 @@ p {
     .nav-links a:visited {
     color: white;
 }
-
-    color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -332,4 +330,11 @@ td {
         padding: 20px;
     }
 
+}
+
+.nav-links a,
+.nav-links a:visited,
+.nav-links a:hover,
+.nav-links a:active {
+    color: white !important;
 }
