@@ -32,7 +32,7 @@ p {
 
 .navbar {
     background: #333;
-    padding: 15px 20px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,12 +40,13 @@ p {
 }
 
 .logo {
-    width: 180px;
+    width: 260px;
+    height: auto;
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .nav-links a {
@@ -61,90 +62,16 @@ p {
 
 .menu-toggle {
     display: none;
-    font-size: 38px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
 }
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 768px) {
-
-    .logo {
-        width: 140px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        background: #222;
-        width: 200px;
-        padding: 15px;
-        border-radius: 10px;
-        z-index: 999;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        color: white;
-        padding: 10px 0;
-    }
-
-}
-
-/* ===== MOBILE ===== */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: row;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 25px;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #222;
-        position: absolute;
-        top: 80px;
-        right: 20px;
-        width: 200px;
-        padding: 15px;
-        border-radius: 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero {
-        height: 400px;
-        object-fit: cover;
-    }
-    
-        }
 
 /* ===== HERO IMAGE ===== */
 
 .hero {
     width: 100%;
-    max-height: 700px;
+    height: 700px;
     object-fit: cover;
     display: block;
 }
@@ -190,178 +117,6 @@ p {
 
 form {
     background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    margin: 20px auto;
-}
-
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: none;
-}
-
-button {
-    background: gold;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background: orange;
-}
-
-/* ===== TABLE ===== */
-
-table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 80%;
-    background: white;
-    color: black;
-}
-
-th,
-td {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-/* ===== SERVICES GALLERY ===== */
-
-.cleaning-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px;
-}
-
-.clean-card {
-    background: #111;
-    border-radius: 15px;
-    overflow: hidden;
-    text-align: center;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.clean-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.clean-card h3 {
-    padding: 15px;
-    font-size: 20px;
-}
-
-/* ===== MOBILE RESPONSIVE ===== */
-
-@media (max-width: 600px) {
-
-    .hero {
-        max-height: 350px;
-    }
-
-    form {
-        width: 90%;
-    }
-
-    .contact-buttons {
-        flex-direction: column;
-    }
-
-    .cleaning-gallery {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-.footer {
-    background: #111;
-    color: gold;
-    padding: 20px;
-    margin-top: 50px;
-    text-align: center;
-    border-top: 2px solid gold;
-}
-
-.footer p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.clean-card {
-    transition: transform 0.3s ease;
-}
-
-.clean-card:hover {
-    transform: translateY(-10px);
-}
-
-.clean-card img {
-    transition: 0.3s;
-}
-
-.clean-card img:hover {
-    opacity: 0.8;
-}
-
-.social-icons {
-    margin: 30px 0;
-}
-
-.social-icons a {
-    color: gold;
-    text-decoration: none;
-    font-size: 20px;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.social-icons a:hover {
-    color: white;
-}
-
-.about-company {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-    line-height: 1.8;
-}
-
-.about-company h2 {
-    margin-bottom: 20px;
-}
-
-.about-company p {
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.reviews {
-    padding: 40px 20px;
-}
-
-.review-card {
-    background: #111;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-form {
-    background: #111;
     padding: 30px;
     border-radius: 20px;
     width: 350px;
@@ -403,147 +158,159 @@ form button:hover {
     background: orange;
 }
 
-@media (max-width: 768px) {
+/* ===== TABLE ===== */
 
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .navbar div {
-        margin-top: 10px;
-    }
-
-    .navbar a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .logo {
-        width: 120px;
-        margin-bottom: 10px;
-    }
-
-    .hero {
-        height: 220px;
-        object-fit: cover;
-    }
-
-    .intro {
-        padding: 20px;
-    }
-
-    .intro h1 {
-        font-size: 28px;
-    }
-
-    .intro p {
-        font-size: 16px;
-    }
-
-    form {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .contact-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-buttons a {
-        width: 80%;
-        text-align: center;
-    }
-
-    .cleaning-gallery {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .reviews {
-        padding: 20px;
-    }
-
-    .review-card {
-        margin-bottom: 20px;
-    }
-
-    iframe {
-        height: 250px;
-    }
-
-    .footer {
-        padding: 20px;
-        font-size: 14px;
-    }
-
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+    color: black;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 32px;
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* ===== SERVICES GALLERY ===== */
+
+.cleaning-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.clean-card {
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
     color: white;
-    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
+
+.clean-card:hover {
+    transform: translateY(-10px);
+}
+
+.clean-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.clean-card img:hover {
+    opacity: 0.8;
+}
+
+.clean-card h3 {
+    padding: 15px;
+    font-size: 20px;
+}
+
+/* ===== REVIEWS ===== */
+
+.reviews {
+    padding: 40px 20px;
+}
+
+.review-card {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== SOCIAL ICONS ===== */
+
+.social-icons {
+    margin: 30px 0;
+}
+
+.social-icons a {
+    color: gold;
+    text-decoration: none;
+    font-size: 28px;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background: #111;
+    color: gold;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-top: 2px solid gold;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* ===== MOBILE ===== */
 
 @media (max-width: 768px) {
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-    }
-
     .logo {
-        width: 220px;
+        width: 170px;
     }
 
     .menu-toggle {
         display: block;
-        margin-top: 0;
-        font-size: 40px;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: #222;
+        padding: 20px;
+        border-radius: 12px;
+        width: 200px;
+        z-index: 999;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .navbar a {
-        display: block;
-        margin: 15px 0;
-        font-size: 22px;
+    .nav-links a {
+        color: white;
+        padding: 10px 0;
+        font-size: 20px;
     }
 
     .hero {
-        height: 350px;
-        object-fit: cover;
-    }
-
-    .intro {
-        padding: 20px;
+        height: 400px;
     }
 
     .intro h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .intro p {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     form {
-        width: 90%;
-        padding: 20px;
+        width: 85%;
     }
 
     .contact-buttons {
@@ -559,23 +326,6 @@ form button:hover {
     .cleaning-gallery {
         grid-template-columns: 1fr;
         padding: 20px;
-    }
-
-    .reviews {
-        padding: 20px;
-    }
-
-    .review-card {
-        margin-bottom: 20px;
-    }
-
-    iframe {
-        height: 250px;
-    }
-
-    .footer {
-        padding: 20px;
-        font-size: 14px;
     }
 
 }

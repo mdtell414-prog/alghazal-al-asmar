@@ -2,7 +2,9 @@
 <html lang="sv">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="google-site-verification" content="RbQwvQIC9w1vpcETWrHebEr0D_9I4dPd9VjVm5s22mg" />
@@ -24,26 +26,29 @@
 
 <body>
 
-<div class="navbar">
+    <!-- NAVBAR -->
 
-    <img src="img/logo.png" class="logo">
+    <div class="navbar">
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
+        <img src="img/logo.png" class="logo">
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Hem</a>
+            <a href="services.html">Tjänster</a>
+            <a href="about.html">Om oss</a>
+            <a href="admin.html">Admin</a>
+
+        </div>
+
     </div>
-
-    <div class="nav-links">
-
-        <a href="index.html">Hem</a>
-        <a href="services.html">Tjänster</a>
-        <a href="about.html">Om oss</a>
-        <a href="admin.html">Admin</a>
-
-    </div>
-
-</div>
 
     <!-- INTRO -->
+
     <section class="intro">
 
         <h1>Välkommen till Al Ghazal Al Asmar</h1>
@@ -56,90 +61,65 @@
     </section>
 
     <!-- REVIEWS -->
+
     <section class="reviews">
 
         <h2>Kundrecensioner</h2>
 
         <div class="review-card">
-            <p>
-                "Fantastiskt resultat och mycket professionellt arbete!"
-            </p>
+            <p>"Fantastiskt resultat och mycket professionellt arbete!"</p>
             <h4>- Anna</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Mycket bra service och trevligt bemötande. Rekommenderas starkt!"
-            </p>
+            <p>"Mycket bra service och trevligt bemötande. Rekommenderas starkt!"</p>
             <h4>- Ahmed</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Professionell rengöring och fantastiskt resultat varje gång."
-            </p>
+            <p>"Professionell rengöring och fantastiskt resultat varje gång."</p>
             <h4>- Fatima</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Snabbt arbete och väldigt rent efteråt. Jag är mycket nöjd."
-            </p>
+            <p>"Snabbt arbete och väldigt rent efteråt. Jag är mycket nöjd."</p>
             <h4>- Samuel</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "De rengjorde våra fönster perfekt. Kommer definitivt boka igen."
-            </p>
+            <p>"De rengjorde våra fönster perfekt. Kommer definitivt boka igen."</p>
             <h4>- Li Wei</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Vänlig personal och hög kvalitet på arbetet."
-            </p>
+            <p>"Vänlig personal och hög kvalitet på arbetet."</p>
             <h4>- Olena</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Noggrant arbete och mycket professionell service."
-            </p>
+            <p>"Noggrant arbete och mycket professionell service."</p>
             <h4>- Hassan</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Jag uppskattar verkligen hur rena och fina våra rum blev."
-            </p>
+            <p>"Jag uppskattar verkligen hur rena och fina våra rum blev."</p>
             <h4>- Amina</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Fantastisk kundservice och mycket bra resultat."
-            </p>
+            <p>"Fantastisk kundservice och mycket bra resultat."</p>
             <h4>- Kenji</h4>
         </div>
 
         <div class="review-card">
-            <p>
-                "Bästa städservicen jag har anlitat i Falkenberg."
-            </p>
+            <p>"Bästa städservicen jag har anlitat i Falkenberg."</p>
             <h4>- Natalia</h4>
-        </div>
-
-        <div class="review-card">
-            <p>
-                "Snabb service och väldigt noggrann städning."
-            </p>
-            <h4>- Johan</h4>
         </div>
 
     </section>
 
     <!-- CONTACT BUTTONS -->
+
     <div class="contact-buttons">
 
         <a href="https://wa.me/46760284499" target="_blank" class="whatsapp">
@@ -153,36 +133,40 @@
     </div>
 
     <!-- HERO IMAGE -->
+
     <img src="img/cleaning.jpg" class="hero">
 
     <!-- BOOKING -->
+
     <h2>Boka Städservice</h2>
 
     <form action="/boka" method="POST">
 
-        <input name="name" placeholder="Namn" required><br><br>
+        <input name="name" placeholder="Namn" required>
 
-        <input name="email" placeholder="E-post" required><br><br>
+        <input name="email" placeholder="E-post" required>
 
-        <input name="date" type="date" required><br><br>
+        <input name="date" type="date" required>
 
         <button type="submit">Boka Nu</button>
 
     </form>
 
     <!-- GOOGLE MAPS -->
+
     <h2>Hitta oss</h2>
 
     <iframe
         src="https://www.google.com/maps?q=Falkenberg,Sweden&output=embed"
         width="100%"
         height="300"
-        style="border:0; border-radius: 15px;"
+        style="border:0; border-radius:15px;"
         allowfullscreen=""
         loading="lazy">
     </iframe>
 
-    <!-- SOCIAL MEDIA -->
+    <!-- SOCIAL ICONS -->
+
     <div class="social-icons">
 
         <a href="https://instagram.com/" target="_blank">
@@ -196,6 +180,7 @@
     </div>
 
     <!-- FOOTER -->
+
     <footer class="footer">
 
         <p>© 2025 Al Ghazal Al Asmar Städservice</p>
@@ -208,18 +193,11 @@
 
     <script>
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
-}
-
-</script>
+    </script>
 
 </body>
 
