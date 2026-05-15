@@ -24,23 +24,24 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
+<div class="navbar">
 
-        <img src="img/logo.png" class="logo">
+    <img src="img/logo.png" class="logo">
 
-        <div class="menu-toggle">
-    ☰
-</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
 
-<div class="nav-links">
-    <a href="index.html">Hem</a>
-    <a href="services.html">Tjänster</a>
-    <a href="about.html">Om oss</a>
-    <a href="admin.html">Admin</a>
-</div>
+    <div class="nav-links">
+
+        <a href="index.html">Hem</a>
+        <a href="services.html">Tjänster</a>
+        <a href="about.html">Om oss</a>
+        <a href="admin.html">Admin</a>
 
     </div>
+
+</div>
 
     <!-- INTRO -->
     <section class="intro">
@@ -213,6 +214,10 @@ const navLinks = document.querySelector(".nav-links");
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
 
 </script>
 

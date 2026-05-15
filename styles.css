@@ -32,18 +32,75 @@ p {
 
 .navbar {
     background: #333;
-    padding: 10px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.navbar a {
+.logo {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
     color: white;
-    margin: 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
     color: gold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        height: 400px;
+        object-fit: cover;
+    }
+
 }
 
 /* ===== HERO IMAGE ===== */
