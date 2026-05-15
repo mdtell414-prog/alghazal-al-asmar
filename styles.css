@@ -342,3 +342,10 @@ td {
 .nav-links a:active {
     color: white !important;
 }
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: white !important;
+}
