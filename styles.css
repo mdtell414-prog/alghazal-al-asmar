@@ -308,3 +308,80 @@ form button:hover {
     transform: scale(1.03);
     background: orange;
 }
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .navbar div {
+        margin-top: 10px;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-buttons a {
+        width: 80%;
+        text-align: center;
+    }
+
+    .cleaning-gallery {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .reviews {
+        padding: 20px;
+    }
+
+    .review-card {
+        margin-bottom: 20px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+
+    .footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+}
