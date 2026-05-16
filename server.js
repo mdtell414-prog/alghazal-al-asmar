@@ -32,13 +32,12 @@ app.post("/boka", async (req, res) => {
   res.redirect("/success.html");
 });
 
-
 // GET
 app.use(
   ["/admin.html", "/bookings", "/delete-booking"],
   basicAuth({
     users: {
-      admin: "12345"
+      admin: "12344"
     },
     challenge: true
   })
