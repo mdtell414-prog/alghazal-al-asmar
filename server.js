@@ -51,7 +51,7 @@ app.get("/bookings", async (req, res) => {
 
 app.delete("/delete/:id", async (req, res) => {
   await 
-  Booking.findByIdAndDelete(req.body.id);
+  Booking.findByIdAndDelete(req.params.id);
   res.send("Deleted");
 });
 
