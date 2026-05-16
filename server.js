@@ -8,16 +8,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
 
-app.use(
-  "/admin.html",
-  basicAuth({
-    users: {
-      admin: "12345"
-    },
-    challenge: true
-  })
-);
-
 // MongoDB connection
 mongoose.connect("mongodb+srv://mdtell414_wdalkar09_user:TElLKaSsAlaWdAlKarSD414XsEriMD@cluster0.p25yy5n.mongodb.net/test?appName=Cluster0")
 .then(() => console.log("MongoDB connected"))
@@ -44,6 +34,16 @@ app.post("/boka", async (req, res) => {
 
 
 // GET
+app.use(
+  ["/admin.html", "/bookings", "/delete-booking"],
+  basicAuth({
+    users: {
+      admin: "12345"
+    },
+    challenge: true
+  })
+);
+
 app.get("/bookings", async (req, res) => {
   const bookings = await Booking.find();
   res.json(bookings);
