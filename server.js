@@ -1,4 +1,5 @@
 const express = require("express");
+const basicAuth = require("express-basic-auth");
 const mongoose = require("mongoose");
 
 const app = express();
@@ -6,6 +7,16 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname));
+
+app.use(
+  "/admin.html",
+  basicAuth({
+    users: {
+      admin: "12345"
+    },
+    challenge: true
+  })
+);
 
 // MongoDB connection
 mongoose.connect("mongodb+srv://mdtell414_wdalkar09_user:TElLKaSsAlaWdAlKarSD414XsEriMD@cluster0.p25yy5n.mongodb.net/test?appName=Cluster0")
