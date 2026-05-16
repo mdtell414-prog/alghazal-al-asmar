@@ -37,7 +37,7 @@ app.use(
   ["/admin.html", "/bookings", "/delete-booking"],
   basicAuth({
     users: {
-      admin: "12344"
+      admin: "12345"
     },
     challenge: true
   })
