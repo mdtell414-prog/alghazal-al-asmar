@@ -10,15 +10,12 @@ app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static(__dirname));
-
-/* ===== MONGODB ===== */
+app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://mdtell414_wdalkar09_user:AHmEdIbRahImWDaLKaRMDALrAmlAErISUD111tEll@cluster0.p25yy5n.mongodb.net/test?appName=Cluster0")
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.log(err));
 
-/* ===== SCHEMA ===== */
 
 const bookingSchema = new mongoose.Schema({
     name: String,
@@ -27,8 +24,6 @@ const bookingSchema = new mongoose.Schema({
 });
 
 const Booking = mongoose.model("Booking", bookingSchema);
-
-/* ===== BOOKING FORM ===== */
 
 app.post("/boka", async (req, res) => {
 
@@ -46,8 +41,6 @@ app.post("/boka", async (req, res) => {
 
 });
 
-/* ===== ADMIN PROTECTION ===== */
-
 app.use(
     ["/admin", "/bookings", "/delete"],
     basicAuth({
@@ -58,13 +51,9 @@ app.use(
     })
 );
 
-/* ===== ADMIN PAGE ===== */
-
 app.get("/admin", (req, res) => {
-    res.sendFile(__dirname + "/admin.html");
+    res.sendFile(__dirname + "/public/admin.html");
 });
-
-/* ===== GET BOOKINGS ===== */
 
 app.get("/bookings", async (req, res) => {
 
@@ -74,8 +63,6 @@ app.get("/bookings", async (req, res) => {
 
 });
 
-/* ===== DELETE BOOKING ===== */
-
 app.delete("/delete/:id", async (req, res) => {
 
     await Booking.findByIdAndDelete(req.params.id);
@@ -84,8 +71,6 @@ app.delete("/delete/:id", async (req, res) => {
 
 });
 
-/* ===== LOGOUT ===== */
-
 app.get("/logout", (req, res) => {
 
     res.set("WWW-Authenticate", 'Basic realm="Admin Area"');
@@ -93,8 +78,6 @@ app.get("/logout", (req, res) => {
     return res.status(401).send("Logged out");
 
 });
-
-/* ===== SERVER ===== */
 
 const PORT = process.env.PORT || 3000;
 

@@ -32,7 +32,8 @@
 
 <script>
 
-fetch('/bookings')
+fetch('/bookings', { credentials: 'same-origin' })
+
 .then(res => res.json())
 .then(data => {
 
