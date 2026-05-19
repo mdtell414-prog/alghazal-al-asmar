@@ -61,14 +61,6 @@ app.delete("/delete/:id", async (req, res) => {
 
 });
 
-app.get("/logout", (req, res) => {
-
-    res.set("WWW-Authenticate", 'Basic realm="Admin Area"');
-
-    return res.status(401).send("Logged out");
-
-});
-
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
