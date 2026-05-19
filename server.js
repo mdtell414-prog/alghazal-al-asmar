@@ -41,16 +41,6 @@ app.post("/boka", async (req, res) => {
 
 });
 
-app.use(
-    ["/admin", "/bookings", "/delete"],
-    basicAuth({
-        users: {
-            admin: "12345"
-        },
-        challenge: true
-    })
-);
-
 app.get("/admin", (req, res) => {
     res.sendFile(__dirname + "/public/admin.html");
 });
